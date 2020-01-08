@@ -1,0 +1,138 @@
+.upperbar {
+  font-family: "Roboto Mono", monospace;
+
+  z-index: 99;
+  position: fixed;
+  display: block;
+  height: 100px;
+  width: 110vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  top: -90px;
+  -webkit-animation: bardropdown 1s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+}
+.info {
+  width: 30%;
+  text-align: center;
+}
+@keyframes bardropdown {
+  from {
+    display: none;
+    top: -90px;
+  }
+  to {
+    display: block;
+    top: 0;
+  }
+}
+.mainlogo {
+  height: 50px;
+}
+.map {
+  background-image: url("astronomy-cosmic-cosmos-dark-355935.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 80vh;
+}
+#map {
+  height: 85vh;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.satelliteSearch {
+  margin-top: 40px;
+  color: white;
+  text-align: center;
+  height: 30px;
+  width: 300px;
+  background-color: #484848;
+  border: none;
+  border-radius: 50px;
+}
+.satelliteSearch:focus {
+  outline: none;
+}
+.body {
+  -webkit-animation: enableOverflow 1s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes enableOverflow {
+  from {
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+  to {
+    visibility: visible;
+    overflow-y: scroll;
+  }
+}
+
+#myUL {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 30vh;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 300px;
+  background-color: black;
+  border-radius: 25px;
+  margin: 30px;
+}
+.satelliteImage:hover {
+  box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+  transition: all 200ms ease-out;
+  cursor: pointer;
+  opacity: 100%;
+}
+.satelliteImage:hover + .satName {
+  visibility: hidden;
+}
+.satelliteImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  opacity: 25%;
+}
+.satName {
+  position: absolute;
+  text-align: center;
+}
+
+.filterlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.button {
+  color: white;
+  text-align: center;
+  height: 30px;
+  width: 100px;
+  background-color: #484848;
+  border-radius: 50px;
+  height: 30px;
+  width: 250px;
+  margin: 10px;
+  border-color: gray;
+}
+.button:focus {
+  outline: none;
+}

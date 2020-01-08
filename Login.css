@@ -1,0 +1,165 @@
+body {
+  visibility: hidden;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  margin: 0;
+  background-color: #1d1d1d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+#preloader {
+  top: 0px;
+  visibility: visible;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #1d1d1d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.preloader {
+  -webkit-animation: fadeOutLogin 1s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+}
+.logoPreloader {
+  -webkit-animation: fadein1 1s, 1s moveup 1s;
+  height: 10vh;
+  margin-bottom: 20vh;
+}
+@keyframes fadein1 {
+  from {
+    height: 7.5vh;
+    opacity: 0;
+    margin-bottom: 0;
+  }
+  to {
+    height: 10vh;
+    opacity: 1;
+    margin-bottom: 0;
+  }
+}
+@keyframes moveup {
+  from {
+    margin-bottom: 0;
+  }
+  to {
+    margin-bottom: 20vh;
+  }
+}
+.copyright {
+  font-size: 1vh;
+  position: absolute;
+  bottom: 0px;
+  opacity: 0;
+  -webkit-animation: fadein 1s;
+  -webkit-animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.login {
+  margin-top: 7.5vh;
+  position: absolute;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 0;
+  -webkit-animation: fadein 1s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  transition: 2s;
+}
+.slash {
+  font-size: 3vh;
+  margin-left: 5vh;
+  margin-right: 5vh;
+}
+.nameInput {
+  color: white;
+  text-align: center;
+  height: 30px;
+  width: 100px;
+  background-color: #484848;
+  border: none;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+}
+.nameInput:focus {
+  outline: none;
+}
+.devider {
+  position: absolute;
+  height: 1px;
+  background-color: #484848;
+  -webkit-animation: devider 1s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes devider {
+  from {
+    width: 0;
+  }
+  to {
+    width: 460px;
+  }
+}
+.submit {
+  height: 32px;
+  background-color: #484848;
+  width: 30px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: none;
+  color: #727272;
+  padding-right: 30px;
+}
+.submit:focus {
+  outline: none;
+}
+.submit:hover {
+  color: white;
+  cursor: pointer;
+}
+.submitarrow:hover {
+  opacity: 100%;
+}
+#welcome {
+  position: absolute;
+  font-size: 50px;
+  margin-top: 7.5vh;
+  opacity: 0;
+}
+.welcome {
+  -webkit-animation: fadein 1s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+@keyframes fadeOutLogin {
+  from {
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

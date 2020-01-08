@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="Login.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="js.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/67dcf3289a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta
+      name="google-signin-client_id"
+      content="793207850835-5unn0a92thdp40pcma3om3nqsnn6rh59.apps.googleusercontent.com"
+    />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>Orbitello</title>
+  </head>
+  <div id="preloader">
+    <img class="logoPreloader" src="Logo.svg" alt="" />
+    <p class="copyright">© 2020 Orbitello All Rights Reserved</p>
+    <div class="devider"></div>
+    <div class="login" id="login">
+      <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <div class="slash">/</div>
+      <input
+        class="nameInput"
+        id="nameInput"
+        type="text"
+        name="name"
+        placeholder="Name"
+        autocomplete="off"
+      /><br />
+      <button class="submit" onclick="submit()" value="Submit">
+        <i class="fas fa-arrow-right submitarrow"></i>
+      </button>
+    </div>
+    <div id="welcome"></div>
+  </div>
+
+  <body onload="setTimeout(onload, 0)">
+    <div id="upperbar">
+      <p class="info" id="name">name</p>
+      <p class="info" id="id">id</p>
+      <img src="Logo.svg" alt="" />
+      <p class="info" id="lat">latitude</p>
+      <p class="info" id="long">longitude</p>
+    </div>
+    <!--The div element for the map -->
+    <div id="map"></div>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9HVPSiUc7eRtAp2ML7U1_Iqm3TZcUD2I&callback=getLatLong"
+    ></script>
+    <div class="filterlist">
+      <input
+        class="satelliteSearch"
+        type="text"
+        id="myInput"
+        onkeyup="myFunction()"
+        placeholder="Search for satellites or enter NORAD-ID"
+        title="Type in a name"
+      />
+      <button class="button" onclick="search()">Search NORAD</button onclick="search()">
+      <ul id="myUL">
+        <li class="card" onclick="setSpaceStation()">
+          <img class="satelliteImage" src="space-station.jpg" alt="" /><a
+            class="satName"
+            >Space Station</a
+          >
+        </li>
+        <li class="card" onclick="setStarLink()">
+          <img
+            class="satelliteImage"
+            src="Starlink-Screenshot-879x485.png"
+            alt=""
+          /><a class="satName">Star-Link 3</a>
+        </li>
+        <li class="card" onclick="setGPS()">
+          <img class="satelliteImage" src="GPS-IIRM.jpg" alt="" /><a
+            class="satName"
+            >USA-196</a
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
